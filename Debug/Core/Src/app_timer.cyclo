@@ -1,0 +1,7 @@
+../Core/Src/app_timer.c:28:6:AppTimer_Start	1
+../Core/Src/app_timer.c:33:6:AppTimer_Stop	1
+../Core/Src/app_timer.c:43:6:AppTimer_Init	1
+../Core/Src/app_timer.c:55:6:AppTimer_ProcessInput	9
+../Core/Src/app_timer.c:76:6:AppTimer_ProcessButton	20
+../Core/Src/app_timer.c:179:6:AppTimer_ShowDisplay	20
+../Core/Src/app_timer.c:243:6:AppTimer_Tick	2
