@@ -148,7 +148,7 @@ FND 표시, 타이머 카운트다운, 서보모터 회전, 자연풍 제어가 
 HAL_TIM_Base_Start_IT(&htim11);
 ```
 
-TIM11 인터럽트 발생 시 `Fan_RotationDisplayTimeout()`을 호출하여 LED를 복구했습니다.
+TIM11 인터럽트 발생 시 `Fan_RotationDisplayTimeout()`을 호출하여 LED가 나오게 함
 
 
 <br>
@@ -156,8 +156,6 @@ TIM11 인터럽트 발생 시 `Fan_RotationDisplayTimeout()`을 호출하여 LED
 
 ## 개선 사항
 
-* LCD 또는 OLED를 추가하여 현재 모드와 타이머 상태를 더 직관적으로 표시
-* 온습도 센서를 추가하여 주변 환경에 따라 자동 풍량 조절
+* LCD를 추가하여 현재 모드와 타이머 상태를 더 직관적으로 표시
 * 블루투스 앱 UI를 제작하여 버튼식 명령 대신 화면 기반 제어 구현
-* 현재 동작 상태를 EEPROM 또는 Flash에 저장하여 전원 재시작 후에도 이전 상태 복원
 * 회전 각도와 풍량 단계를 사용자가 직접 설정할 수 있도록 기능 확장
