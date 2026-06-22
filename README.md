@@ -81,8 +81,7 @@ Fan/
 ```
 
 ## 5. 시연 영상
-https://img.youtube.com/vi/SbTbGcqxesI/0.jpg
-[![YouTube ](https://img.youtube.com/vi/SbTbGcqxesI/0.jpg)](https://youtu.be/SbTbGcqxesI)
+<a href="https://youtu.be/SbTbGcqxesI"> <img src="./images/youtube.png" width="300"> </a> *이미지를 클릭하면 시연 영상(유튜브)로 이동합니다.*
 
 <br>
 
