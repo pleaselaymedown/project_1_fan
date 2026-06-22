@@ -78,6 +78,7 @@ Fan/
 ├── STM32F411RETX_FLASH.ld       # Flash 메모리 링커 스크립트
 ├── STM32F411RETX_RAM.ld         # RAM 메모리 링커 스크립트
 └── README.md                    # 프로젝트 전체 가이드 문서
+```
 
 <br>
 
