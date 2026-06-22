@@ -80,133 +80,20 @@ Fan/
 └── README.md                    # 프로젝트 전체 가이드 문서
 ```
 
-<br>
 
-## 5. 하드웨어 블록 다이어그램
+## 5. Troubleshooting
 
-```mermaid
-flowchart LR
-    USER[User] --> BTN[Push Button 4EA]
-    USER --> BT[Bluetooth Module]
+### 5.1 자연풍 모드에서 풍량이 너무 급격하게 바뀌는 문제
 
-    BTN --> MCU[STM32F411RE MCU]
-    BT -->|USART1 + DMA| MCU
-
-    MCU -->|TIM3 PWM| FAN[DC Fan Motor]
-    MCU -->|TIM2 PWM| SERVO[Servo Motor]
-
-    MCU --> LED[LED Indicator]
-    MCU --> BUZZER[Buzzer]
-    MCU --> FND[4-Digit FND]
-
-    MCU -->|TIM1| TIMER[Countdown Timer]
-    MCU -->|TIM4| FND_REFRESH[FND Multiplexing]
-    MCU -->|TIM5| FAN_TICK[Servo Rotation / Natural Wind]
-    MCU -->|TIM10| BUZZER_CTRL[Buzzer Control]
-    MCU -->|TIM11| LED_RESTORE[LED Display Restore]
-```
-
-이미지 파일로 따로 넣고 싶다면 아래처럼 사용할 수 있습니다.
-
-```md
-![Hardware Block Diagram](./images/hardware_block_diagram.png)
-```
-
-<br>
-
-## 6. 플로우차트
-
-### 6.1 전체 동작 흐름
-
-```mermaid
-flowchart TD
-    A[System Start] --> B[HAL_Init]
-    B --> C[SystemClock_Config]
-    C --> D[GPIO / DMA / TIM / USART Init]
-    D --> E[Fan_Init]
-    E --> F[AppTimer_Init]
-    F --> G[Button_Init]
-    G --> H[UART DMA Receive Start]
-    H --> I[TIM4 FND Timer Start]
-    I --> J[Main Loop]
-
-    J --> K{Button Event?}
-
-    K -->|BTN1 Pressed| L[Fan Speed Up or Timer Increase]
-    K -->|BTN2 Pressed| M[Fan Speed Down or Timer Decrease]
-    K -->|BTN3 Released| N[Rotation Mode Change]
-    K -->|BTN3 Long| O[Natural Wind Toggle]
-    K -->|BTN4 Released| P[Timer NEXT]
-    K -->|BTN4 Long| Q[Timer DONE]
-
-    L --> J
-    M --> J
-    N --> J
-    O --> J
-    P --> J
-    Q --> J
-```
-
-### 6.2 인터럽트 처리 흐름
-
-```mermaid
-flowchart TD
-    A[Interrupt Callback] --> B{Interrupt Source}
-
-    B -->|USART1 RX Complete| C[Read rxData]
-    C --> D[Restart UART DMA Receive]
-    D --> E{rxData Type}
-    E -->|A/B/C/D| F[Fan Control]
-    E -->|0~9 or *| G[Timer Input]
-
-    B -->|TIM1| H[Timer Countdown]
-    H --> I{Time Remaining <= 0?}
-    I -->|Yes| J[Fan Turn Off]
-    I -->|No| K[Continue]
-
-    B -->|TIM4| L[FND Display Refresh]
-    B -->|TIM5| M[Servo Rotation / Natural Wind Tick]
-    B -->|TIM10| N[Buzzer Off]
-    B -->|TIM11| O[Restore LED to Fan Speed Display]
-```
-
-<br>
-
-## 7. Troubleshooting
-
-### 7.1 짧게 누르기와 길게 누르기 구분 문제
-
-#### 문제 상황
-
-BTN3, BTN4에 여러 기능을 넣으면서 짧게 누르기와 길게 누르기가 구분되지 않는 문제
-
-#### 원인
-
-버튼을 누른 시점과 떼는 시점을 따로 관리하지 않으면 입력 유지 시간을 기준으로 동작을 구분하기 어렵습니다.
-
-#### 해결 방법
-
-`Button_t` 구조체에 버튼이 눌린 시간과 길게 누르기 처리 여부를 저장
-
-```c
-uint32_t pressStartTime;
-bool longPressHandled;
-```
-
-2초 이상 누르고 있으면 `BTN_LONG` 이벤트를 발생시키고, 길게 누르기가 이미 처리된 경우 버튼을 뗄 때 `BTN_RELEASED`가 중복 실행되지 않도록 설정
-
-
-### 7.2 자연풍 모드에서 풍량이 너무 급격하게 바뀌는 문제
-
-#### 문제 상황
+#### 🔍 문제 상황
 
 자연풍 모드에서 랜덤 풍량을 바로 PWM에 반영하면 바람 세기가 갑자기 바뀌어 부자연스러운 문제가 발생했습니다.
 
-#### 원인
+#### ❓ 원인 분석
 
 랜덤으로 정한 목표 풍량과 현재 풍량의 차이가 클 경우 PWM 값이 급격히 변합니다.
 
-#### 해결 방법
+#### ❗ 해결 방법
 
 `fan_controller.c`에서 지수이동평균을 적용
 
@@ -218,17 +105,17 @@ bool longPressHandled;
 
 ---
 
-### 7.3 FND 표시와 다른 기능이 동시에 동작할 때 불안정한 문제
+### 5.2 FND 표시와 다른 기능이 동시에 동작할 때 불안정한 문제
 
-#### 문제 상황
+#### 🔍 문제 상황
 
 FND 표시, 타이머 카운트다운, 서보모터 회전, 자연풍 제어가 동시에 실행될 때, 순서가 꼬이거나 제대로 작동하지 않는 문제
 
-#### 원인
+#### ❓ 원인 분석
 
 각 기능의 실행 주기가 다르기 때문에 하나의 루프에서 모두 처리했기 때문
 
-#### 해결 방법
+#### ❗ 해결 방법
 
 기능별로 타이머 인터럽트를 분리함
 
@@ -243,17 +130,17 @@ FND 표시, 타이머 카운트다운, 서보모터 회전, 자연풍 제어가 
 
 ---
 
-### 7.4 회전 모드 표시 LED와 풍량 표시 LED가 겹치는 문제
+### 5.3 회전 모드 표시 LED와 풍량 표시 LED가 겹치는 문제
 
-#### 문제 상황
+#### 🔍 문제 상황
 
 회전 모드 변경 시 LED로 회전 범위를 표시해야 하는데, 기존 LED는 풍량 표시에도 사용 중이어서 LED가 겹치는 상황이 발생
 
-#### 원인
+#### ❓ 원인 분석
 
 같은 LED를 풍량 표시와 회전 모드 표시가 함께 사용했기 때문
 
-#### 해결 방법
+#### ❗ 해결 방법
 
 회전 모드 변경 시 LED를 잠시 회전 모드 표시용으로 사용하고, TIM11을 이용해 3초 후 다시 풍량 LED 표시로 복구함
 
