@@ -80,14 +80,20 @@ Fan/
 └── README.md                    # 프로젝트 전체 가이드 문서
 ```
 
-## 5. 시연 영상
-<a href="https://youtu.be/SbTbGcqxesI"> <img src="./images/youtube.png" width="300"> </a> *이미지를 클릭하면 시연 영상(유튜브)로 이동합니다.*
+## 5. 완성품 및 시연 영상
+### 5.1 완성품 <p align="center"> <img src="./images/front.png" width="300"> <img src="./images/side.png" width="300"> <img src="./images/back.png" width="300"> </p> <p align="center"> <b>완성품 전면 / 측면 / 후면 사진</b> </p>
+
 
 <br>
 
-## 5. Troubleshooting
+### 5.2 시연 영상
+<p align="center"> <a href="https://youtu.be/SbTbGcqxesI"> <img src="./images/youtube.png" width="300"> </a> </p> <p align="center"> <b>이미지를 클릭하면 시연 영상으로 이동합니다.</b> </p>
 
-### 5.1 자연풍 모드에서 풍량이 너무 급격하게 바뀌는 문제
+<br>
+
+## 6. Troubleshooting
+
+### 6.1 자연풍 모드에서 풍량이 너무 급격하게 바뀌는 문제
 
 #### 🔍 문제 상황
 
@@ -109,7 +115,7 @@ Fan/
 
 ---
 
-### 5.2 FND 표시와 다른 기능이 동시에 동작할 때 불안정한 문제
+### 6.2 FND 표시와 다른 기능이 동시에 동작할 때 불안정한 문제
 
 #### 🔍 문제 상황
 
@@ -134,7 +140,7 @@ FND 표시, 타이머 카운트다운, 서보모터 회전, 자연풍 제어가 
 
 ---
 
-### 5.3 회전 모드 표시 LED와 풍량 표시 LED가 겹치는 문제
+### 6.3 회전 모드 표시 LED와 풍량 표시 LED가 겹치는 문제
 
 #### 🔍 문제 상황
 
