@@ -89,7 +89,7 @@ Fan/
 <br>
 
 ### 5.2 시연 영상
-<p align="center"> <a href="https://youtu.be/SbTbGcqxesI"> <img src="./images/youtube.png" width="300"> </a> </p> <p align="center"> <b>이미지를 클릭하면 시연 영상으로 이동합니다.</b> </p>
+<a href="https://youtu.be/SbTbGcqxesI"> <img src="./images/youtube.png" width="300"> </a> </p> <p align="center"> <b>이미지를 클릭하면 시연 영상으로 이동합니다.</b> </p>
 
 <br>
 
