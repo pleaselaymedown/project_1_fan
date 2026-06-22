@@ -1,4 +1,4 @@
-# Smart Fan
+# 🌀Smart Fan🌀
 
 ## 1. 프로젝트 요약
 
@@ -80,6 +80,11 @@ Fan/
 └── README.md                    # 프로젝트 전체 가이드 문서
 ```
 
+## 5. 시연 영상
+https://img.youtube.com/vi/SbTbGcqxesI/0.jpg
+[![YouTube ](https://img.youtube.com/vi/SbTbGcqxesI/0.jpg)](https://youtu.be/SbTbGcqxesI)
+
+<br>
 
 ## 5. Troubleshooting
 
