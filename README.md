@@ -55,7 +55,7 @@
 
 <br>
 
-## 🧩 4. Project Structure (프로젝트 구조)
+## 📂 4. Project Structure (프로젝트 구조)
 
 ```bash
 Fan/
