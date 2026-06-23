@@ -1,4 +1,5 @@
 # 🌀Project_1 Smart Fan🌀
+<br>
 
 ## 📌 1.Project Summary (프로젝트 요약)
 
@@ -92,6 +93,7 @@ Fan/
 ### 5.2 Demonstration (시연 영상)
 <br>
 <a href="https://youtu.be/SbTbGcqxesI"> <img src="./images/youtube.png" width="500"> </a> </p> <b> 
+  
 ### 이미지를 클릭하면 영상으로 이동합니다.</b> </p>
 
 <br>
