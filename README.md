@@ -83,9 +83,11 @@ Fan/
 <br>
 
 ## 🎬 5. Final Product & Demonstration (완성품 및 시연)
+<br>
+
 ### 5.1 Final Product (완성품) <br>
 <img src="./images/front.png" width="250"> <img src="./images/side.png" width="250"> <img src="./images/back.png" width="250"> </p> <b> 
-### 전면 /측면 / 후면 사진</b> </p>
+### &emsp;&emsp;&emsp;전면 &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;측면 &emsp;&emsp;&emsp;&emsp;&emsp;&emsp; 후면 사진</b> </p>
 
 
 <br>
@@ -94,7 +96,7 @@ Fan/
 <br>
 <a href="https://youtu.be/SbTbGcqxesI"> <img src="./images/youtube.png" width="500"> </a> </p> <b> 
   
-### 이미지를 클릭하면 영상으로 이동합니다.</b> </p>
+### *이미지를 클릭하면 영상으로 이동합니다*</b> </p>
 
 <br>
 
@@ -171,7 +173,7 @@ TIM11 인터럽트 발생 시 `Fan_RotationDisplayTimeout()`을 호출하여 LED
 <br>
 
 
-## 개선 사항
+## 🔧7. 개선 사항
 
 * LCD를 추가하여 현재 모드와 타이머 상태를 더 직관적으로 표시
 * 블루투스 앱 UI를 제작하여 버튼식 명령 대신 화면 기반 제어 구현
