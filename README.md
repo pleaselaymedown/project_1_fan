@@ -1,4 +1,4 @@
-# 🌀Smart Fan🌀
+# 🌀<Project 1> Smart Fan🌀
 
 ## 📌 1. 프로젝트 요약
 
