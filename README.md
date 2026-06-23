@@ -1,13 +1,13 @@
 # 🌀Project_1 Smart Fan🌀
 
-## 📌 1. 프로젝트 요약
+## 📌 1.Project Summary (프로젝트 요약)
 
 여러 기능을 아우르는 스마트 선풍기로,
 버튼 입력과 블루투스 UART 통신을 이용해 선풍기의 풍량, 회전 각도, 자연풍 모드, 타이머 기능을 제어할 수 있도록 구현
 
 <br>
 
-## ✨ 2. 주요 기능
+## ✨ 2. Key Features (주요 기능)
 
 * 총 8단계 풍량 조절
 * 회전 모드는 `정지 → 45도 → 90도 → 180도 → 정지` 순서로 전환
@@ -16,18 +16,17 @@
 
 <br>
 
-## ⚙️ 3. 기술 스택 및 개발 환경
+## ⚙️ 3. Tech Stack (기술 스택)
 
-### 3.1 Language
+### 3.1 Language (사용 언어)
 
 ![C](https://img.shields.io/badge/C-00599C?style=for-the-badge\&logo=c\&logoColor=white)
 
-### 3.2 Development Tool
-
+### 3.2 Development Tool (개발 환경)
 ![STM32CubeIDE](https://img.shields.io/badge/STM32CubeIDE-03234B?style=for-the-badge\&logo=stmicroelectronics\&logoColor=white)
 ![STM32CubeMX](https://img.shields.io/badge/STM32CubeMX-03234B?style=for-the-badge\&logo=stmicroelectronics\&logoColor=white)
 
-### 3.3 Hardware
+### 3.3 Hardware (하드웨어)
 
 | 구분            | 내용             |
 | ------------- | ---------------- |
@@ -40,7 +39,7 @@
 | Output        | LED, Buzzer      |
 | Driver        | STM32 HAL Driver |
 
-### 3.4 Peripheral
+### 3.4 Peripheral (주변장치)
 
 | Peripheral   | 사용 목적             |
 | ------------ | ----------------- |
@@ -55,7 +54,7 @@
 
 <br>
 
-## 🧩 4. 프로젝트 구조
+## 🧩 4. Project Structure (프로젝트 구조)
 
 ```bash
 Fan/
@@ -82,22 +81,22 @@ Fan/
 
 <br>
 
-## 🎬 5. 완성품 및 시연 영상
-### 5.1 완성품 <br>
+## 🎬 5. Final Product & Demonstration (완성품 및 시연)
+### 5.1 Final Product (완성품) <br>
 <img src="./images/front.png" width="250"> <img src="./images/side.png" width="250"> <img src="./images/back.png" width="250"> </p> <b> 
 ### 전면 /측면 / 후면 사진</b> </p>
 
 
 <br>
 
-### 5.2 시연 영상
+### 5.2 Demonstration (시연 영상)
 <br>
 <a href="https://youtu.be/SbTbGcqxesI"> <img src="./images/youtube.png" width="500"> </a> </p> <b> 
 ### 이미지를 클릭하면 영상으로 이동합니다.</b> </p>
 
 <br>
 
-## 🎯 6. Troubleshooting
+## 🎯 6. Troubleshooting (문제 해결 기록)
 
 ## 6.1 자연풍 모드에서 풍량이 너무 급격하게 바뀌는 문제
 
