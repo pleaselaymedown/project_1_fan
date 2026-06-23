@@ -83,7 +83,8 @@ Fan/
 <br>
 
 ## 🎬 5. 완성품 및 시연 영상
-### 5.1 완성품 <img src="./images/front.png" width="250"> <img src="./images/side.png" width="250"> <img src="./images/back.png" width="250"> </p> <b> 전면      /      측면      /      후면 사진</b> </p>
+### 5.1 완성품 <br>
+<img src="./images/front.png" width="250"> <img src="./images/side.png" width="250"> <img src="./images/back.png" width="250"> </p> <b> 전면      /      측면      /      후면 사진</b> </p>
 
 
 <br>
