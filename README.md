@@ -87,7 +87,7 @@ Fan/
 
 ### 5.1 Final Product (완성품) <br>
 <img src="./images/front.png" width="250"> <img src="./images/side.png" width="250"> <img src="./images/back.png" width="250"> </p> <b> 
-### &emsp;&emsp;&emsp;&emsp;&emsp;전면 &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;측면 &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp; 후면 사진</b> </p>
+### &emsp;&emsp;&emsp;&emsp;&emsp;전면 &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;측면 &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp; 후면 </b> </p>
 
 
 <br>
